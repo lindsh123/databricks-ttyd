@@ -166,7 +166,7 @@ static void wsi_output(struct lws *wsi, pty_buf_t *buf) {
 int callback_tty(struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in,
                  size_t len) {
   struct pss_tty *pss = (struct pss_tty *)user;
-  char buf[256];
+  char buf[1024];
   size_t n = 0;
 
   switch (reason) {
