@@ -124,7 +124,7 @@ static bool spawn_process(struct pss_tty *pss, uint16_t columns, uint16_t rows) 
 
     if (close(fd) != 0) {
       lwsl_err("Close temp file failed with error: %d (%s)\n", errno, strerror(errno));
-      return false
+      return false;
     }
     argv[n++] = filePath;
   }
